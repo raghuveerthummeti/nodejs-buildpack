@@ -28,7 +28,11 @@ detect_memory() {
   esac
 }
 
-export PATH="$HOME/.heroku/node/bin:$PATH:$HOME/bin:$HOME/node_modules/.bin"
+export PATH="$HOME/.heroku/ghostscript/bin:$HOME/.heroku/graphicsmagick/bin:$HOME/.heroku/node/bin:$PATH:$HOME/bin:$HOME/node_modules/.bin"
+export LD_LIBRARY_PATH="$HOME/.heroku/jpeg/lib:$HOME/.heroku/libpng/lib:$HOME/.heroku/zlib/lib:$LD_LIBRARY_PATH"
+echo "path is $PATH and ld_library_path $LD_LIBRARY_PATH"
+echo "The result of gs command `gs --version`"
+echo "The result of gm command `gm version`"
 export NODE_HOME="$HOME/.heroku/node"
 export NODE_ENV=${NODE_ENV:-production}
 

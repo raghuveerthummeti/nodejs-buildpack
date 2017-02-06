@@ -94,6 +94,8 @@ install_bins() {
     install_npm "$npm_engine" "$BUILD_DIR/.heroku/node"
   fi
   warn_old_npm
+
+  install_gs_gm $BP_DIR $BUILD_DIR/.heroku
 }
 
 header "Installing binaries"
