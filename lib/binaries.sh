@@ -48,15 +48,15 @@ install_gs_gm() {
   local build_dir="$2"
 
   echo "Installing ghostscript..."
-  tar xvzf $bp_dir/vendor/ghostscript.tar.gz -C $build_dir
+  tar xzf $bp_dir/vendor/ghostscript.tar.gz -C $build_dir
 
   echo "Installing graphicsmagick..."
-  tar xvzf $bp_dir/vendor/graphicsmagick.tar.gz -C $build_dir
+  tar xzf $bp_dir/vendor/graphicsmagick.tar.gz -C $build_dir
 
   echo "Installing jpeg, zlib, libpng dependencies..."
-  tar xvzf $bp_dir/vendor/jpeg.tar.gz -C $build_dir
-  tar xvzf $bp_dir/vendor/libpng.tar.gz -C $build_dir
-  tar xvzf $bp_dir/vendor/zlib.tar.gz -C $build_dir
+  tar xzf $bp_dir/vendor/jpeg.tar.gz -C $build_dir
+  tar xzf $bp_dir/vendor/libpng.tar.gz -C $build_dir
+  tar xzf $bp_dir/vendor/zlib.tar.gz -C $build_dir
 }
 
 install_npm() {

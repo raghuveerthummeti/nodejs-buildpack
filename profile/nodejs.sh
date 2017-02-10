@@ -30,9 +30,10 @@ detect_memory() {
 
 export PATH="$HOME/.heroku/ghostscript/bin:$HOME/.heroku/graphicsmagick/bin:$HOME/.heroku/node/bin:$PATH:$HOME/bin:$HOME/node_modules/.bin"
 export LD_LIBRARY_PATH="$HOME/.heroku/jpeg/lib:$HOME/.heroku/libpng/lib:$HOME/.heroku/zlib/lib:$LD_LIBRARY_PATH"
-echo "path is $PATH and ld_library_path $LD_LIBRARY_PATH"
+export MAGICK_CONFIGURE_PATH="$HOME/.heroku/graphicsmagick/lib/GraphicsMagick-1.3.18/config"
+echo "path is $PATH and ld_library_path $LD_LIBRARY_PATH magick_configure $MAGICK_CONFIGURE_PATH"
 echo "The result of gs command `gs --version`"
-echo "The result of gm command `gm version`"
+echo "The result of gm command `gm convert -list delegates`"
 export NODE_HOME="$HOME/.heroku/node"
 export NODE_ENV=${NODE_ENV:-production}
 
